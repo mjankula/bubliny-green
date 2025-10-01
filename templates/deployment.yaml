@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bubliny-green
+  name: bubliny-green
+  namespace: mjankula-ns-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bubliny-blue
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: bubliny-green
+    spec:
+      containers:
+      - image: quay.io/rhdevelopers/bgd:1.0.0
+        name: bubliny-green
+        env:
+        - name: COLOR
+          value: "green"
+

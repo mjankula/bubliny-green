@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-bubliny-green
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: mjankula-ns-1
+    server: https://kubernetes.default.svc
+  project:  default
+  source:
+    path: templates/
+    repoURL: https://github.com/mjankula/bubliny-green.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
+
