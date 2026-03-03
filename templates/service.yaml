@@ -4,7 +4,7 @@ metadata:
   labels:
     app: bubliny-green
   name: bubliny-green
-  namespace: mjankula-ns-1
+  namespace: mjankula-ns-2
 spec:
   ports:
   - port: 8080
