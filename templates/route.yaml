@@ -7,7 +7,7 @@ metadata:
   name: bubliny-green
   namespace: mjankula-ns-2
 spec:
-#  subdomain: bubliny-green
+  subdomain: bubliny-green
 #  host: bubliny-green-mjankula-ns-2.mjankula-intranet.sbr-shift.gsslab.brq2.redhat.com
   port:
     targetPort: 8080
